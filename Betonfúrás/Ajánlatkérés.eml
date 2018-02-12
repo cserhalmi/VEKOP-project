@@ -1,0 +1,150 @@
+Delivered-To: cserhalmi.gyorgy@gmail.com
+Received: by 10.202.213.147 with SMTP id m141csp4086966oig;
+        Tue, 6 Feb 2018 12:19:57 -0800 (PST)
+X-Received: by 10.37.171.132 with SMTP id v4mr2368730ybi.490.1517948397728;
+        Tue, 06 Feb 2018 12:19:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1517948397; cv=none;
+        d=google.com; s=arc-20160816;
+        b=HbMo0VxIHj9qI2IVfJiVuBXsp9ATDbvon2AH+yyiKn7iZ0Ap7Fj/zT4M25/edrKhJr
+         jhSTrxk42p87bwbXiI5hnFg4dxVTB7dVaflYdDVzIC0ykxLXTSZ8kDDCjFFQBJkCxk5d
+         xlE9ngRb/J11OLtNMA7bMl0bwoMOl+ZIIQfu5nv+YEVcPbq/NVmbT5marZ68QdsAi3Rq
+         5MPta7VG7AtBwm1VOSB0Pr1xk/JIJm7VYGYwZF5YcbW6Kg6mfIP/Zulk2FQ9ZKtnuLG/
+         wmZYqDgg/UKNmQfEXHK729gyuY0dGanO/cT6R/r2gxg0tD1qdw1iQYwbL/piVsD8M8Nv
+         HIYw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:references:in-reply-to:mime-version
+         :dkim-signature:arc-authentication-results;
+        bh=h6RNRBtQodG1AmWtL0ExqMdRq+fsOMCW3aXR+P2dwQ8=;
+        b=BP3QU3vY5ZLg+RCdcDCl2Hi8Z4MbIBq5ukVdzNUT6W5bMtV+rkRHgoYrdwrkvGo7uz
+         ocMfni2ikXTFlTGUZ5BHgXgyeycU2D7pRvRT6O+r3erJ6tx5kV6lPDfnNp0a/EVJc4Dl
+         nxUps63lIPlpKWjQInMAh2uxCq15hEe2Qwu4Hf5U08qNTS0XOOjUCYOZd1/OC7Y/1PVC
+         SWQxul1lk4/jLpVCUQqkMNOEZ/ne0r8uuEgN9T88Dsm68Z1GcZ+Bgd+50uwrBlzPljLR
+         sUgc3nZfOsvxxPcBXvSoY7zclmWRCeexPYY1S3F/K1GcUztXGb3wcEjVNg7uh24dg2Bw
+         px4A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Cpou53al;
+       spf=pass (google.com: domain of betonmester@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=betonmester@gmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmail.com
+Return-Path: <betonmester@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id z79sor3912290ywz.20.2018.02.06.12.19.57
+        for <cserhalmi.gyorgy@gmail.com>
+        (Google Transport Security);
+        Tue, 06 Feb 2018 12:19:57 -0800 (PST)
+Received-SPF: pass (google.com: domain of betonmester@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Cpou53al;
+       spf=pass (google.com: domain of betonmester@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=betonmester@gmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=h6RNRBtQodG1AmWtL0ExqMdRq+fsOMCW3aXR+P2dwQ8=;
+        b=Cpou53alg9kSF0MOLk/W1FAQ2vxquzP7LCrj+CEtOizbsiNhAyQN27JN14S43uUsd3
+         Ww+uKzyDvBVLaHeODl4TI7XkuqiorfixOJwTA6Kd3jOPvYG70UEL+mhH+2p2A/ZjZL2Q
+         8NYYDpPeo25Qi79QyelCEzoSkVCHzhNID+61pMkKjbC24Lt3N/EDqd0iYBx5FcsKbPcF
+         +jXkqAFERomfRcMqWLCSvQZnKW4OHrHc1yftE2INTPD1VX5BqhBVrEW1Sv89LC6ezsHx
+         2NCbcaP7+mp/K20tltz7oMVP0sblcIDH3yZ+zinLsBLeyy7XyiG9BbNsY+bjOzbBxwBe
+         ozWw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=h6RNRBtQodG1AmWtL0ExqMdRq+fsOMCW3aXR+P2dwQ8=;
+        b=m+mOHrfM7K7JOi5UPvwkMhh8bIo0L3lXFSWCvfz8Dh8C4GGFAePxbfpK2wZQR2zIPl
+         qjKTxI9+IDDXsrtX9i2EN0i+glBlKsR5y4LaG1DzOB/TXSMiEq8ZskpKvbFH7yEECX5K
+         KpA0tRqZh2GQo6tOKGNfqHvw2+RxyFwqsSe2tgts4xqLpnpJ67pQn6D55gq6xNJJ/KWg
+         QhTFvj4kVjsbfuHzzmnf0RL1jR01kC1abWJ4cvJmrnhe+c6Gh6Mp2xVbPO6h9iLuos9E
+         D9IMjbD2qxW9acufqjKhhgBVv6FWGT8Z9HZPpWACvOJWw92IVsTfdSG9vHe401v0UrTu
+         aZSQ==
+X-Gm-Message-State: APf1xPDRY/gIzGcrhkJYBOO2DzE8t4I3V+OYShTEkybzXNh0gWuBwDjh
+	6yakREPQsbVvosNp7Mp7U0kEReMuQuXAxWBnNpo=
+X-Google-Smtp-Source: AH8x226EB4aoNQwx27nOL7hLJeQFBiezlsY1ogyU12YTwkt0UURrzrtOTp6cyjDdCsSxxQOo50IAaSLBCMiIxLmpqoo=
+X-Received: by 10.13.210.69 with SMTP id u66mr2342913ywd.183.1517948396837;
+ Tue, 06 Feb 2018 12:19:56 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.37.186.144 with HTTP; Tue, 6 Feb 2018 12:19:56 -0800 (PST)
+In-Reply-To: <88e97610737ed0f8eeb299f0fdf12654@falvagas.hu>
+References: <88e97610737ed0f8eeb299f0fdf12654@falvagas.hu>
+From: =?UTF-8?B?QmV0b25mw7pyw6FzIEJldG9udsOhZ8Ohcw==?= <betonmester@gmail.com>
+Date: Tue, 6 Feb 2018 21:19:56 +0100
+Message-ID: <CALGaooG6kt0nHhKJAk0cEXtWvUWB7jf1jY-KW7XMOXv115sdgw@mail.gmail.com>
+Subject: =?UTF-8?B?UmU6IEFqw6FubGF0a8OpcsOpcw==?=
+To: =?UTF-8?Q?Cserhalmi_Gy=C3=B6rgy?= <cserhalmi.gyorgy@gmail.com>
+Content-Type: multipart/alternative; boundary="001a114e40f4fb21f6056490e6aa"
+
+--001a114e40f4fb21f6056490e6aa
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Tisztelt Cserhalmi Gy=C3=B6rgy!
+
+A f=C3=BAr=C3=A1si munka megoldhat=C3=B3, ennek =C3=A1ra 3db furat eset=C3=
+=A9n Bp-i c=C3=ADm mellett
+65000Ft.
+
+Tisztelettel:   Breier Csaba
+
+
+2018. febru=C3=A1r 1. 18:08 Cserhalmi Gy=C3=B6rgy =C3=ADrta, <cserhalmi.gyo=
+rgy@gmail.com>:
+
+> Felad=C3=B3: Cserhalmi Gy=C3=B6rgy <cserhalmi.gyorgy@gmail.com>
+> T=C3=A1rgy: Aj=C3=A1nlatk=C3=A9r=C3=A9s
+>
+> =C3=9Czenet t=C3=B6rzse:
+> Tisztelt falvagas.hu!
+> Szeretn=C3=A9k =C3=A1raj=C3=A1nlatot k=C3=A9rni
+> 2 db D130 vasbeton f=C3=B6d=C3=A9m =C3=A1tt=C3=B6r=C3=A9sre =C3=A9s
+> 1 db D150x300 salakbeton falszerkezet f=C3=BAr=C3=A1sra.
+> A f=C3=B6d=C3=A9m vastags=C3=A1ga >12cm - eddig siker=C3=BClt bef=C3=BArn=
+om.
+> Az =C3=A9p=C3=BClet 1969-ben k=C3=A9sz=C3=BClt, 4 emeletes t=C3=ADpush=C3=
+=A1z, a f=C3=B6d=C3=A9m el=C5=91regy=C3=A1rtott
+> elemekb=C5=91l k=C3=A9sz=C3=BClt.
+> =C3=9Cdv=C3=B6zlettel, Cserhalmi Gy=C3=B6rgy
+>
+> --
+> Az =C3=BCzenet az Falv=C3=A1g=C3=A1s http://falvagas.hu kapcsolati =C5=B1=
+rlap
+> felhaszn=C3=A1l=C3=A1s=C3=A1val ker=C3=BCl tov=C3=A1bb=C3=ADt=C3=A1sra
+>
+>
+
+--001a114e40f4fb21f6056490e6aa
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div>Tisztelt Cserhalmi Gy=C3=B6rgy!<br><br></div>A f=
+=C3=BAr=C3=A1si munka megoldhat=C3=B3, ennek =C3=A1ra 3db furat eset=C3=A9n=
+ Bp-i c=C3=ADm mellett 65000Ft.<br><br></div>Tisztelettel:=C2=A0=C2=A0 Brei=
+er Csaba<br><div><div><br></div></div></div><div class=3D"gmail_extra"><br>=
+<div class=3D"gmail_quote">2018. febru=C3=A1r 1. 18:08 Cserhalmi Gy=C3=B6rg=
+y =C3=ADrta, <span dir=3D"ltr">&lt;<a href=3D"mailto:cserhalmi.gyorgy@gmail=
+.com" target=3D"_blank">cserhalmi.gyorgy@gmail.com</a>&gt;</span>:<br><bloc=
+kquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #cc=
+c solid;padding-left:1ex">Felad=C3=B3: Cserhalmi Gy=C3=B6rgy &lt;<a href=3D=
+"mailto:cserhalmi.gyorgy@gmail.com">cserhalmi.gyorgy@gmail.com</a>&gt;<br>
+T=C3=A1rgy: Aj=C3=A1nlatk=C3=A9r=C3=A9s<br>
+<br>
+=C3=9Czenet t=C3=B6rzse:<br>
+Tisztelt <a href=3D"http://falvagas.hu" rel=3D"noreferrer" target=3D"_blank=
+">falvagas.hu</a>!<br>
+Szeretn=C3=A9k =C3=A1raj=C3=A1nlatot k=C3=A9rni<br>
+2 db D130 vasbeton f=C3=B6d=C3=A9m =C3=A1tt=C3=B6r=C3=A9sre =C3=A9s<br>
+1 db D150x300 salakbeton falszerkezet f=C3=BAr=C3=A1sra.<br>
+A f=C3=B6d=C3=A9m vastags=C3=A1ga &gt;12cm - eddig siker=C3=BClt bef=C3=BAr=
+nom.<br>
+Az =C3=A9p=C3=BClet 1969-ben k=C3=A9sz=C3=BClt, 4 emeletes t=C3=ADpush=C3=
+=A1z, a f=C3=B6d=C3=A9m el=C5=91regy=C3=A1rtott elemekb=C5=91l k=C3=A9sz=C3=
+=BClt.<br>
+=C3=9Cdv=C3=B6zlettel, Cserhalmi Gy=C3=B6rgy<br>
+<br>
+--<br>
+Az =C3=BCzenet az Falv=C3=A1g=C3=A1s <a href=3D"http://falvagas.hu" rel=3D"=
+noreferrer" target=3D"_blank">http://falvagas.hu</a> kapcsolati =C5=B1rlap =
+felhaszn=C3=A1l=C3=A1s=C3=A1val ker=C3=BCl tov=C3=A1bb=C3=ADt=C3=A1sra<br>
+<br>
+</blockquote></div><br></div>
+
+--001a114e40f4fb21f6056490e6aa--
